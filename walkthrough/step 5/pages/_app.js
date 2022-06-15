@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Content, Theme } from '@carbon/react';
+import PublicHeader from '../src/components/PublicHeader';
 import '../styles/globals.scss'
 
 
