@@ -15,7 +15,6 @@ import { Globe, Application, PersonFavorite } from '@carbon/react/icons';
 import { InfoSection, InfoCard } from '@/src/components/Info';
 
 function LandingPage() {
-//const LandingPage = () => {
   return (
     <Grid className="landing-page" fullWidth>
       <Column lg={16} md={8} sm={4} className="landing-page__banner">

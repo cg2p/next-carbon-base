@@ -4,6 +4,7 @@
 @use '@carbon/react/scss/theme' as *;
 @use './mixins.scss' as *;
 @use './overrides.scss';
+@use '@/src/components/Info/info.scss';
 
 .landing-page__illo {
   max-width: 100%;

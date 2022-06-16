@@ -261,6 +261,8 @@ A new file `app.scss` in `styles` picks up the scss styles for each page. In Nex
 @use '@/src/content/RepoPage/repo-page';
 ```
 
+`landing.scss` needs to pull in the Info styles add `@use '@/src/components/Info/info.scss';`
+
 ## 6. Build in GraphQL API Support
 For GraphQL support we will be guided by [Step 3](https://carbondesignsystem.com/developing/react-tutorial/step-3) of the Carbon Design tutorial. However we will need a code architecture to use different API calls, not just to GitHub.
 
@@ -274,8 +276,6 @@ install Apollo and GraphQL
 yarn add @apollo/client@3.4.10 graphql@15.5.2
 ```
 
-add to _app.js
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 
 
 https://www.freecodecamp.org/news/how-to-fetch-graphql-data-in-next-js-with-apollo-graphql/#step-1-adding-apollo-graphql-to-a-next-js-app 
