@@ -2,7 +2,7 @@ import LandingPage from '../src/content/LandingPage/LandingPage';
 import Layout from '../src/components/Layout/Layout';
 import { Content } from '@carbon/react';
 
-const Home = () => {
+function Home () {
   return (
     <Layout>
       <Content>

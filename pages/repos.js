@@ -2,16 +2,16 @@ import Head from 'next/head';
 import React from 'react';
 import Layout from '@/src/components/Layout';
 import { Content } from '@carbon/react';
+import RepoPage from '@/src/content/RepoPage/RepoPage';
 
-
-const Page2 = () => {
+function ReposPage() {
   return (
     <Layout>
       <Content>
-      <div>This is Page 2</div>
+      <RepoPage />
       </Content>
     </Layout>
   )
 };
 
-export default Page2;
+export default ReposPage;

@@ -247,12 +247,36 @@ The structure now follows this pattern:
        -- _overrides.sccs
 --styles
   -- global.scss
+  -- app.scss
   -- Home.modules.scss (will be deleted, kept here as a reminder)
 
 ```
 A copy of the pages at this stage are in [walkthrough / step 5]()
 
+A new file `app.scss` in `styles` picks up the scss styles for each page. In NextJS, this needs to be imported by `_app.js`. We can use `app.scss` to pull in the app specific page styles. Its entries could equally go in `globals.scss` (already imported in `_app.js`) but this is the beginnings of organising files, and we need to look at optimising the Carbon build later.
+
+`app.scss`
+```
+@use '@/src/content/LandingPage/landing-page';
+@use '@/src/content/RepoPage/repo-page';
+```
+
 ## 6. Build in GraphQL API Support
+For GraphQL support we will be guided by [Step 3](https://carbondesignsystem.com/developing/react-tutorial/step-3) of the Carbon Design tutorial. However we will need a code architecture to use different API calls, not just to GitHub.
+
+In order to show GraphQL in action we create an `.env.local` with an access token for GitHub. In React apps this prefix is `REACT_APP_` but in NextJS it is `NEXT_PUBLIC
+```
+NEXT_PUBLIC_GITHUB_PERSONAL_ACCESS_TOKEN=xx
+```
+
+install Apollo and GraphQL
+```
+yarn add @apollo/client@3.4.10 graphql@15.5.2
+```
+
+add to _app.js
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+
 
 https://www.freecodecamp.org/news/how-to-fetch-graphql-data-in-next-js-with-apollo-graphql/#step-1-adding-apollo-graphql-to-a-next-js-app 
 
